@@ -22,6 +22,7 @@ const Movie = ({ user }) => {
 		reviews: []
 	});
 
+	// Image error detection variables
 	const [imageError, setImageError] = useState(false);
 
 	const handleImageError = (error) => {
@@ -53,13 +54,17 @@ const Movie = ({ user }) => {
 			<Container>
 				<Row>
 					<Col>
-						{movie.poster && !imageError ? (
+						{/*Sometimes the movie does not have a poster in the database.
+						Other times the image no longer exists.
+						Handle error detection in either case.*/}
+						{!imageError ? (
 							<Image
 								src={movie.poster}
 								fluid
 								onError={(e) => handleImageError(e)}
 							/>
 						) : (
+							// If poster image error, display text instead
 							<p>NO POSTER IMAGE AVAILABLE</p>
 						)}
 					</Col>
@@ -68,6 +73,7 @@ const Movie = ({ user }) => {
 							<Card.Header as="h5">{movie.title}</Card.Header>
 							<Card.Body>
 								<Card.Text>{movie.plot}</Card.Text>
+								{/*User needs to be logged in to see this text/link*/}
 								{user && (
 									<Link to={`/movies/${id}/review`}>
 										Add Review
@@ -75,6 +81,7 @@ const Movie = ({ user }) => {
 								)}
 							</Card.Body>
 						</Card>
+						{/*I believe this is a line break or something similar*/}
 						<br></br>
 						<h2>Reviews</h2>
 					</Col>
