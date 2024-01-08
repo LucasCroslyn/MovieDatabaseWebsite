@@ -13,7 +13,9 @@
 - npm install --save react-router-dom (cd into the frontend folder first from terminal)
 - npm install axios (cd into the frontend folder first from terminal)
 
-## May have missed some things! 
+## MongoDB Atals Admin User
+- Name: MainUser
+- Password: JjMDKhOINH0H7uqn
 
 # Running the website
 
