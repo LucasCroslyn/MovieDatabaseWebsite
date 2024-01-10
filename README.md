@@ -12,6 +12,7 @@
 - npm install react-bootstrap bootstrap (cd into the frontend folder first from terminal)
 - npm install --save react-router-dom (cd into the frontend folder first from terminal)
 - npm install axios (cd into the frontend folder first from terminal)
+- npm i moment --save (cd in the main project directory; it is for doing date formatting)
 
 ## MongoDB Atals Admin User
 - Name: MainUser
