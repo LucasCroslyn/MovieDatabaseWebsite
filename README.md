@@ -1,3 +1,5 @@
+Currently this is only a locally ran website. In the future I may make it a lot better and actually be accessible somewhere. For now, in order to see/interact with it fully, you need to download/run the below things.
+
 # Things to download for development
 
 ## Programs
